@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content ="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="topbar">
+      <a href="https://github.com/hakanmerdan/EEERover2024">EEERover 2024</a>
+    </div>
+    
+    <div class="data">
+      <h2>Data</h2>
+      <p>Name: <span id="name"></span></p>
+      <p>Infrared: <span id="infrared"></span></p>
+      <p>Radio: <span id="radio"></span></p>
+      <p>Polarity: <span id="polarity"></span></p>
+      <p>Species: </p>
+      <hr>
+    </div>
+    
+    <div class="movement">
+      <h2>Movement</h2>
+      <input type="range" min="0" max="100" value="0" id="myRange" class="slider">
+      <p>Speed: <span id="value"></span></p>
+      
+      <div class="arrow-keys">
+        <div class="arrow-row">
+          <div class="empty"></div>
+          <div class="arrow" onmousedown="moveForward()" onmouseup="stop()">↑</div>
+          <div class="empty"></div>
+        </div>
+        <div class="arrow-row">
+          <div class="arrow" onmousedown="moveLeft()" onmouseup="stop()">←</div>
+          <div class="arrow" onmousedown="moveBackward()" onmouseup="stop()">↓</div>
+          <div class="arrow" onmousedown="moveRight()" onmouseup="stop()">→</div>
+        </div>
+        <div class="stop" onclick="stop()">STOP</div>
+        <p>RESPONSE: <span id="response"></span></p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js?v=<?php echo time(); ?>"></script>
+  <!-- ?v=<?php echo time(); ?> -->
+</body>
+
+</html>
+

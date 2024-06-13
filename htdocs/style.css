@@ -1,0 +1,136 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.topbar {
+  width: 100%;
+  padding: 10px 0px;
+  background: #eee;
+  font-size: 25px;
+  text-align: center;
+}
+
+.topbar a:hover {
+  text-decoration: none;
+}
+
+.data {
+  text-align: center;
+}
+
+.data h2 {
+  margin: 15px 0px 10px 0px;
+}
+
+.data p {
+  margin: 5px;
+}
+
+.data hr {
+  width: 60vw;
+  margin: 10px 0px 0px 0px;
+}
+
+.movement {
+  text-align: center;
+}
+
+.movement h2 {
+  margin: 15px 0px 5px 0px;
+}
+
+.movement p  {
+  margin: 0px 0px 10px 0px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 250px;
+  height: 20px;
+  background: linear-gradient(90deg, grey 0%, #eee 100%);
+  opacity: 1;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  border-radius: 15px;
+  box-shadow: 0px 0px 0px 1px black;
+}
+
+.slider:hover {
+  opacity: 0.7;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  background: grey;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: 2px solid black;
+}
+
+.arrow-keys {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25px;
+}
+
+.arrow-row {
+  display: flex;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background-color: black;
+  color: white;
+  font-size: 30px;
+  margin: 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+.arrow:hover {
+  background-color: grey;
+}
+.arrow:active {
+  width: 65px;
+  height: 65px;
+  background-color: #d17878d0;
+}
+
+.stop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 60px;
+  background-color: red;
+  color: white;
+  font-size: 25px;
+  margin: 10px;
+  border-radius: 50px;
+  border: 2px solid black;
+  cursor: pointer;
+  user-select: none;
+}
+.stop:hover {
+  opacity: 0.7;
+}
+.stop:active {
+  width: 95px;
+  height: 55px;
+}
