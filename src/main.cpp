@@ -339,18 +339,78 @@ void readRadio() {
 
 
 // TEST WITH DIGITAL PIN
+// void readInfrared() {
+//   unsigned long startTime = 0;
+//   unsigned long currentTime = 0;
+
+//   // Measure max and min - this way we find amplitude and can find threshold
+//   unsigned long start = millis();
+//   int maxRead = 0;
+//   int minRead = 1023;
+//   int currentRead;
+
+//   // Measure for 10 milliseconds
+//   while (millis() - start < 10) {
+//     currentRead = analogRead(A1);
+//     if (currentRead > maxRead) {
+//       maxRead = currentRead;
+//     }
+//     if (currentRead < minRead) {
+//       minRead = currentRead;
+//     }
+//   }
+
+//   int threshold = minRead + (maxRead - minRead) / 2; // Average to find midpoint
+
+//   Serial.print("Threshold: ");
+//   Serial.print(threshold);
+
+//   // Wait for the first rising edge
+//   while (analogRead(A1) < threshold);
+//   startTime = micros();
+
+//   // Initialize variables to store the time intervals
+//   unsigned long intervals[5];
+//   int count = 0;
+
+//   while (count < 5) {
+//     // Wait for the signal to go above the threshold
+//     while (analogRead(A1) < threshold);
+//     // Record the current time when the signal rises
+//     currentTime = micros();
+//     // Store the interval
+//     intervals[count] = currentTime - startTime;
+//     // Update the start time
+//     startTime = currentTime;
+//     count++;
+//   }
+
+//   // Calculate the average period
+//   unsigned long totalPeriod = 0;
+//   for (int i = 0; i < 5; i++) {
+//     totalPeriod += intervals[i];
+//   }
+//   unsigned long averagePeriod = totalPeriod / 5;
+//   float frequency = 1000000.0 / averagePeriod;
+
+//   // Print the frequency
+//   Serial.print(", Frequency: ");
+//   Serial.print(frequency);
+//   Serial.println(" Hz");
+// }
+
 void readInfrared() {
   unsigned long startTime = 0;
   unsigned long currentTime = 0;
 
-  // Measure max and min - this way we find amplitude and can find threshold
+  // Measure max and min  - this way we find amplitude and can find threshold
   unsigned long start = millis();
   int maxRead = 0;
   int minRead = 1023;
   int currentRead;
 
-  // Measure for 10 milliseconds
-  while (millis() - start < 10) {
+  // Measure for 100 milliseconds
+  while (millis() - start < 50) {
     currentRead = analogRead(A1);
     if (currentRead > maxRead) {
       maxRead = currentRead;
@@ -362,39 +422,31 @@ void readInfrared() {
 
   int threshold = minRead + (maxRead - minRead) / 2; // Average to find midpoint
 
-  Serial.print("Threshold: ");
-  Serial.print(threshold);
-
   // Wait for the first rising edge
   while (analogRead(A1) < threshold);
   startTime = micros();
 
-  // Initialize variables to store the time intervals
-  unsigned long intervals[5];
-  int count = 0;
-
-  while (count < 5) {
-    // Wait for the signal to go above the threshold
-    while (analogRead(A1) < threshold);
-    // Record the current time when the signal rises
-    currentTime = micros();
-    // Store the interval
-    intervals[count] = currentTime - startTime;
-    // Update the start time
-    startTime = currentTime;
-    count++;
+  // wait for 10 waves
+  //might be bugs due to not leaving the loop
+  if(threshold > 50){//if statement might fix this bug
+    int count = 0;
+    while (count < 5) {
+      while (analogRead(A1) >= threshold); // Wait for the signal to drop below the threshold
+      while (analogRead(A1) < threshold);  // Wait for the signal to go above the threshold
+      count++;
+    }
   }
+  currentTime = micros();
 
-  // Calculate the average period
-  unsigned long totalPeriod = 0;
-  for (int i = 0; i < 5; i++) {
-    totalPeriod += intervals[i];
-  }
-  unsigned long averagePeriod = totalPeriod / 5;
-  float frequency = 1000000.0 / averagePeriod;
+  // Calculate the average period of one wavelength
+  unsigned long period = (currentTime - startTime) / 5;
+  float frequency = 1000000.0 / period;
 
   // Print the frequency
-  Serial.print(", Frequency: ");
-  Serial.print(frequency);
-  Serial.println(" Hz");
+  Serial.print("Infrared: ");
+  Serial.println(frequency);
+
+  receivedInfraredFreq = String(frequency);
+
+  // can print only when the output is in range - for example 350 - 400 hz and 550 to 600 HZ
 }
