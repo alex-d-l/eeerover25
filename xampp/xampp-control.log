@@ -1,0 +1,129 @@
+15:10:08  [main] 	Initializing Control Panel
+15:10:08  [main] 	Windows Version:  Home  64-bit
+15:10:08  [main] 	XAMPP Version: 8.2.12
+15:10:08  [main] 	Control Panel Version: 3.3.0  [ Compiled: Apr 6th 2021 ]
+15:10:09  [main] 	You are not running with administrator rights! This will work for
+15:10:09  [main] 	most application stuff but whenever you do something with services
+15:10:09  [main] 	there will be a security dialogue or things will break! So think 
+15:10:09  [main] 	about running this application with administrator rights!
+15:10:09  [main] 	XAMPP Installation Directory: "c:\users\alexa\desktop\eeerover - platformio\eeerover webpage\xampp\"
+15:10:09  [main] 	WARNING: Your install directory contains spaces.  This may break programs/scripts
+15:10:09  [main] 	Checking for prerequisites
+15:10:09  [main] 	All prerequisites found
+15:10:09  [main] 	Initializing Modules
+15:10:09  [main] 	Starting Check-Timer
+15:10:09  [main] 	Control Panel Ready
+15:10:14  [Apache] 	Attempting to start Apache app...
+15:10:15  [Apache] 	Status change detected: running
+15:12:44  [Apache] 	Attempting to stop Apache (PID: 17620)
+15:12:44  [Apache] 	Attempting to stop Apache (PID: 15672)
+15:12:44  [Apache] 	Status change detected: stopped
+15:12:45  [Apache] 	Attempting to start Apache app...
+15:12:46  [Apache] 	Status change detected: running
+15:12:55  [Apache] 	Attempting to stop Apache (PID: 10216)
+15:12:55  [Apache] 	Attempting to stop Apache (PID: 6568)
+15:12:55  [Apache] 	Status change detected: stopped
+15:12:59  [Apache] 	Problem detected!
+15:12:59  [Apache] 	Port 80 in use by "Unable to get info" with PID 10216!
+15:12:59  [Apache] 	Apache WILL NOT start without the configured ports free!
+15:12:59  [Apache] 	You need to uninstall/disable/reconfigure the blocking application
+15:12:59  [Apache] 	or reconfigure Apache and the Control Panel to listen on a different port
+15:12:59  [Apache] 	Attempting to start Apache app...
+15:12:59  [Apache] 	Status change detected: running
+15:13:49  [Apache] 	Attempting to stop Apache (PID: 18316)
+15:13:49  [Apache] 	Attempting to stop Apache (PID: 6140)
+15:13:50  [Apache] 	Status change detected: stopped
+15:13:52  [Apache] 	Attempting to start Apache app...
+15:13:53  [Apache] 	Status change detected: running
+15:14:43  [main] 	Deinitializing Modules
+15:14:43  [main] 	Deinitializing Control Panel
+
+15:20:26  [main] 	Initializing Control Panel
+15:20:26  [main] 	Windows Version:  Home  64-bit
+15:20:26  [main] 	XAMPP Version: 8.2.12
+15:20:26  [main] 	Control Panel Version: 3.3.0  [ Compiled: Apr 6th 2021 ]
+15:20:26  [main] 	You are not running with administrator rights! This will work for
+15:20:26  [main] 	most application stuff but whenever you do something with services
+15:20:26  [main] 	there will be a security dialogue or things will break! So think 
+15:20:26  [main] 	about running this application with administrator rights!
+15:20:26  [main] 	XAMPP Installation Directory: "c:\users\alexa\desktop\eeerover - platformio\eeerover webpage\xampp\"
+15:20:26  [main] 	WARNING: Your install directory contains spaces.  This may break programs/scripts
+15:20:26  [main] 	Checking for prerequisites
+15:20:30  [main] 	All prerequisites found
+15:20:30  [main] 	Initializing Modules
+15:20:30  [main] 	Starting Check-Timer
+15:20:30  [main] 	Control Panel Ready
+15:20:53  [Apache] 	Attempting to start Apache app...
+15:20:54  [Apache] 	Status change detected: running
+15:21:51  [Apache] 	Attempting to stop Apache (PID: 17892)
+15:21:51  [Apache] 	Attempting to stop Apache (PID: 3168)
+15:21:51  [Apache] 	Status change detected: stopped
+15:22:02  [Apache] 	Attempting to start Apache app...
+15:22:02  [Apache] 	Status change detected: running
+15:23:18  [Apache] 	Attempting to stop Apache (PID: 3272)
+15:23:18  [Apache] 	Attempting to stop Apache (PID: 17356)
+15:23:18  [Apache] 	Status change detected: stopped
+15:23:22  [Apache] 	Attempting to start Apache app...
+15:23:22  [Apache] 	Status change detected: running
+15:23:42  [Apache] 	Attempting to stop Apache (PID: 17680)
+15:23:42  [Apache] 	Attempting to stop Apache (PID: 18672)
+15:23:42  [Apache] 	Status change detected: stopped
+00:14:03  [main] 	Deinitializing Modules
+00:14:03  [main] 	Deinitializing Control Panel
+
+17:01:16  [main] 	Initializing Control Panel
+17:01:16  [main] 	Windows Version:  Home  64-bit
+17:01:16  [main] 	XAMPP Version: 8.2.12
+17:01:16  [main] 	Control Panel Version: 3.3.0  [ Compiled: Apr 6th 2021 ]
+17:01:16  [main] 	You are not running with administrator rights! This will work for
+17:01:16  [main] 	most application stuff but whenever you do something with services
+17:01:16  [main] 	there will be a security dialogue or things will break! So think 
+17:01:16  [main] 	about running this application with administrator rights!
+17:01:16  [main] 	XAMPP Installation Directory: "c:\users\alexa\desktop\eeerover - platformio\eeerover webpage\xampp\"
+17:01:16  [main] 	WARNING: Your install directory contains spaces.  This may break programs/scripts
+17:01:16  [main] 	Checking for prerequisites
+17:01:17  [main] 	All prerequisites found
+17:01:17  [main] 	Initializing Modules
+17:01:17  [main] 	Starting Check-Timer
+17:01:17  [main] 	Control Panel Ready
+17:01:19  [Apache] 	Attempting to start Apache app...
+17:01:20  [Apache] 	Status change detected: running
+17:01:23  [Apache] 	Attempting to stop Apache (PID: 8048)
+17:01:23  [Apache] 	Attempting to stop Apache (PID: 17804)
+17:01:24  [Apache] 	Status change detected: stopped
+17:01:46  [Apache] 	Attempting to start Apache app...
+17:01:46  [Apache] 	Status change detected: running
+17:02:30  [Apache] 	Attempting to stop Apache (PID: 21420)
+17:02:30  [Apache] 	Attempting to stop Apache (PID: 2236)
+17:02:30  [Apache] 	Status change detected: stopped
+17:02:38  [main] 	Deinitializing Modules
+17:02:38  [main] 	Deinitializing Control Panel
+
+17:56:09  [main] 	Initializing Control Panel
+17:56:09  [main] 	Windows Version:  Home  64-bit
+17:56:09  [main] 	XAMPP Version: 8.2.12
+17:56:09  [main] 	Control Panel Version: 3.3.0  [ Compiled: Apr 6th 2021 ]
+17:56:09  [main] 	You are not running with administrator rights! This will work for
+17:56:09  [main] 	most application stuff but whenever you do something with services
+17:56:09  [main] 	there will be a security dialogue or things will break! So think 
+17:56:09  [main] 	about running this application with administrator rights!
+17:56:09  [main] 	XAMPP Installation Directory: "c:\users\alexa\desktop\eeerover - platformio\eeerover webpage\xampp\"
+17:56:09  [main] 	WARNING: Your install directory contains spaces.  This may break programs/scripts
+17:56:09  [main] 	Checking for prerequisites
+17:56:09  [main] 	All prerequisites found
+17:56:09  [main] 	Initializing Modules
+17:56:09  [Apache] 	XAMPP Apache is already running on port 80
+17:56:09  [Apache] 	XAMPP Apache is already running on port 443
+17:56:09  [main] 	Starting Check-Timer
+17:56:09  [main] 	Control Panel Ready
+17:56:12  [Apache] 	Attempting to stop Apache (PID: 11132)
+17:56:12  [Apache] 	Attempting to stop Apache (PID: 18516)
+17:56:12  [Apache] 	Status change detected: stopped
+17:56:14  [Apache] 	Attempting to start Apache app...
+17:56:14  [Apache] 	Status change detected: running
+18:08:12  [Apache] 	Attempting to stop Apache (PID: 26604)
+18:08:12  [Apache] 	Attempting to stop Apache (PID: 25048)
+18:08:12  [Apache] 	Status change detected: stopped
+18:34:38  [main] 	Deinitializing Modules
+18:34:38  [main] 	Deinitializing Control Panel
+
