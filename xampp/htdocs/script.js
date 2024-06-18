@@ -14,6 +14,7 @@ consolidatedRequest.onreadystatechange = function() {
         document.getElementById("infrared").innerHTML = response.infrared;
         document.getElementById("polarity").innerHTML = response.polarity;
         document.getElementById("radio").innerHTML = response.radio;
+        document.getElementById("species").innerHTML = response.species;
     }
 };
 
@@ -88,6 +89,9 @@ function speed(speed) {
     sendCommand('SPEED' + speed);
 }
 
+function calibrateMagnet() {
+    sendCommand('C');
+}
 
 // This code is for the speed slider
 var slider = document.getElementById("myRange");
@@ -130,6 +134,10 @@ function keyDown(event) {
         case ' ':
             event.preventDefault();
             stop();
+            break;
+        case 'c':
+            event.preventDefault();
+            calibrateMagnet();
             break;
     }
 }

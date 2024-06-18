@@ -127,3 +127,98 @@
 18:34:38  [main] 	Deinitializing Modules
 18:34:38  [main] 	Deinitializing Control Panel
 
+10:32:37  [main] 	Initializing Control Panel
+10:32:37  [main] 	Windows Version:  Home  64-bit
+10:32:37  [main] 	XAMPP Version: 8.2.12
+10:32:37  [main] 	Control Panel Version: 3.3.0  [ Compiled: Apr 6th 2021 ]
+10:32:37  [main] 	You are not running with administrator rights! This will work for
+10:32:37  [main] 	most application stuff but whenever you do something with services
+10:32:37  [main] 	there will be a security dialogue or things will break! So think 
+10:32:37  [main] 	about running this application with administrator rights!
+10:32:37  [main] 	XAMPP Installation Directory: "c:\users\alexa\desktop\eeerover - platformio\eeerover webpage\xampp\"
+10:32:37  [main] 	WARNING: Your install directory contains spaces.  This may break programs/scripts
+10:32:37  [main] 	Checking for prerequisites
+10:32:37  [main] 	All prerequisites found
+10:32:37  [main] 	Initializing Modules
+10:32:37  [main] 	Starting Check-Timer
+10:32:37  [main] 	Control Panel Ready
+10:32:40  [Apache] 	Attempting to start Apache app...
+10:32:40  [Apache] 	Status change detected: running
+10:35:15  [Apache] 	Attempting to stop Apache (PID: 4320)
+10:35:15  [Apache] 	Attempting to stop Apache (PID: 28348)
+10:35:15  [Apache] 	Status change detected: stopped
+10:35:16  [Apache] 	Attempting to start Apache app...
+10:35:17  [Apache] 	Status change detected: running
+10:37:11  [Apache] 	Attempting to stop Apache (PID: 6668)
+10:37:11  [Apache] 	Attempting to stop Apache (PID: 10272)
+10:37:11  [Apache] 	Status change detected: stopped
+10:37:12  [Apache] 	Attempting to start Apache app...
+10:37:12  [Apache] 	Status change detected: running
+10:55:06  [Apache] 	Attempting to stop Apache (PID: 13980)
+10:55:06  [Apache] 	Attempting to stop Apache (PID: 9664)
+10:55:06  [Apache] 	Status change detected: stopped
+11:18:40  [main] 	Deinitializing Modules
+11:18:40  [main] 	Deinitializing Control Panel
+
+09:18:04  [main] 	Initializing Control Panel
+09:18:04  [main] 	Windows Version:  Home  64-bit
+09:18:04  [main] 	XAMPP Version: 8.2.12
+09:18:04  [main] 	Control Panel Version: 3.3.0  [ Compiled: Apr 6th 2021 ]
+09:18:04  [main] 	You are not running with administrator rights! This will work for
+09:18:04  [main] 	most application stuff but whenever you do something with services
+09:18:04  [main] 	there will be a security dialogue or things will break! So think 
+09:18:04  [main] 	about running this application with administrator rights!
+09:18:04  [main] 	XAMPP Installation Directory: "c:\users\alexa\desktop\eeerover - platformio\eeerover webpage\xampp\"
+09:18:04  [main] 	WARNING: Your install directory contains spaces.  This may break programs/scripts
+09:18:04  [main] 	Checking for prerequisites
+09:18:07  [main] 	All prerequisites found
+09:18:07  [main] 	Initializing Modules
+09:18:07  [main] 	Starting Check-Timer
+09:18:07  [main] 	Control Panel Ready
+09:18:29  [Apache] 	Attempting to start Apache app...
+09:18:29  [Apache] 	Status change detected: running
+09:31:32  [Apache] 	Attempting to stop Apache (PID: 12460)
+09:31:32  [Apache] 	Attempting to stop Apache (PID: 3572)
+09:31:32  [Apache] 	Status change detected: stopped
+09:31:33  [Apache] 	Attempting to start Apache app...
+09:31:34  [Apache] 	Status change detected: running
+09:38:38  [Apache] 	Attempting to stop Apache (PID: 6568)
+09:38:38  [Apache] 	Attempting to stop Apache (PID: 7160)
+09:38:38  [Apache] 	Status change detected: stopped
+10:32:41  [Apache] 	Status change detected: running
+10:35:15  [Apache] 	Status change detected: stopped
+10:35:16  [Apache] 	Status change detected: running
+10:37:11  [Apache] 	Status change detected: stopped
+10:37:12  [Apache] 	Status change detected: running
+10:55:06  [Apache] 	Status change detected: stopped
+11:18:40  [main] 	Deinitializing Modules
+11:18:40  [main] 	Deinitializing Control Panel
+
+11:27:39  [main] 	Initializing Control Panel
+11:27:39  [main] 	Windows Version:  Home  64-bit
+11:27:39  [main] 	XAMPP Version: 8.2.12
+11:27:39  [main] 	Control Panel Version: 3.3.0  [ Compiled: Apr 6th 2021 ]
+11:27:39  [main] 	You are not running with administrator rights! This will work for
+11:27:39  [main] 	most application stuff but whenever you do something with services
+11:27:39  [main] 	there will be a security dialogue or things will break! So think 
+11:27:39  [main] 	about running this application with administrator rights!
+11:27:39  [main] 	XAMPP Installation Directory: "c:\users\alexa\desktop\eeerover - platformio\eeerover webpage\xampp\"
+11:27:39  [main] 	WARNING: Your install directory contains spaces.  This may break programs/scripts
+11:27:39  [main] 	Checking for prerequisites
+11:27:39  [main] 	All prerequisites found
+11:27:39  [main] 	Initializing Modules
+11:27:39  [main] 	Starting Check-Timer
+11:27:39  [main] 	Control Panel Ready
+11:27:40  [Apache] 	Attempting to start Apache app...
+11:27:41  [Apache] 	Status change detected: running
+12:16:42  [Apache] 	Attempting to stop Apache (PID: 1908)
+12:16:42  [Apache] 	Attempting to stop Apache (PID: 20064)
+12:16:43  [Apache] 	Status change detected: stopped
+12:16:49  [Apache] 	Attempting to start Apache app...
+12:16:49  [Apache] 	Status change detected: running
+12:24:32  [Apache] 	Attempting to stop Apache (PID: 21660)
+12:24:32  [Apache] 	Attempting to stop Apache (PID: 21708)
+12:24:33  [Apache] 	Status change detected: stopped
+12:24:38  [main] 	Deinitializing Modules
+12:24:38  [main] 	Deinitializing Control Panel
+

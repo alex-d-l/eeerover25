@@ -7,19 +7,22 @@
 const char ssid[] = "Alex";
 const char pass[] = "alex4palace";
 
-// Set your group number to make the IP address constant - only do this on the EEERover network
+// Constant Group number to make IP address constant (Only for EEERover network)
 const int groupNumber = 25; 
 
 // Global Variables:
-int currentSpeed = 0;
-float null_point = 0;
-String receivedName = "";
+int currentSpeed = 0; // this variable determines the speed of the rover's movement
+float null_point = 1.45; // this variable is used in the magnetic code
+
+// Variables to store the data that will be sent to the webpage
+String receivedName = ""; 
 String receivedPolarity = "";
 String receivedInfraredFreq = "";
 String receivedRadioFreq = "";
+String receivedSpecies = "";
 
-// Variables to store time measurements
-volatile unsigned long lastRisingEdgeTimeRadio = 0;
+// Variables to store time measurements of rising edges to calculate frequency
+volatile unsigned long lastRisingEdgeTimeRadio = 0; 
 volatile unsigned long currentRisingEdgeTimeRadio = 0;
 volatile unsigned long edgeCountRadio = 0;
 float frequencyRadio = 0;
@@ -29,21 +32,23 @@ volatile unsigned long currentRisingEdgeTimeInfra = 0;
 volatile unsigned long edgeCountInfra = 0;
 float frequencyInfra = 0;
 
+// Creates web server instance to listen to HTTP requests on port 80
 WiFiWebServer server(80);
 
-bool isLetter(char c);
-
+// Function declarations
 void handleRoot();
 void handleNotFound();
 void handleCommand();
 void handleConsolidatedData();
 
 void readName();
+bool isLetter(char c);
 void readPolarity();
 void readInfrared();
+void handleRisingEdgeInfra();
 void readRadio();
 void handleRisingEdge();
-void handleRisingEdgeInfra();
+void species();
 
 
 void setup() {
@@ -64,12 +69,6 @@ void setup() {
 
   // Digital Pin for Radio
   pinMode(8, INPUT);
-
-  // Initial Setup values
-  digitalWrite(2, LOW);
-  digitalWrite(3, LOW);
-  analogWrite(6, 0);
-  analogWrite(4, 0);
 
   Serial.begin(9600);
 
@@ -112,7 +111,6 @@ void setup() {
   
   attachInterrupt(digitalPinToInterrupt(8), handleRisingEdge, RISING);
   attachInterrupt(digitalPinToInterrupt(9), handleRisingEdgeInfra, RISING);
-
 }
 
 
@@ -123,6 +121,7 @@ void loop() {
   readPolarity();
   readInfrared();
   readRadio();
+  species();
 }
 
 
@@ -188,6 +187,19 @@ void handleCommand() {
     analogWrite(4, 0); // Left
   }
 
+  else if(cmd == "C") {
+    float temp = 0;
+    for(int i = 0; i < 20; i++) {
+      temp = analogRead(A2);
+      null_point += temp;
+      delay(2);
+    }
+    null_point = 3.3 * null_point / 1023;
+    null_point = null_point / 20;
+    Serial.print("NULL point: ");
+    Serial.println(null_point);
+  }
+
   server.send(200, F("text/plain"), cmd);
 
   // For debugging:
@@ -223,7 +235,8 @@ void handleConsolidatedData() {
   response += "\"name\": \"" + receivedName + "\", ";
   response += "\"infrared\": \"" + receivedInfraredFreq + "\", ";
   response += "\"radio\": \"" + receivedRadioFreq + "\", ";
-  response += "\"polarity\": \"" + receivedPolarity + "\"";
+  response += "\"polarity\": \"" + receivedPolarity + "\", ";
+  response += "\"species\": \"" + receivedSpecies + "\"";
   response += "}";
 
   server.send(200, "application/json", response);
@@ -263,8 +276,8 @@ bool isLetter(char c) {
 
 
 void readPolarity() {
-  float null_point = 1.45; // might need calibration (POLARITY)
-  float displacement = 0.05; // this value will need calibration as well (POLARITY)
+  // float null_point = 1.45; // might need calibration (POLARITY)
+  float displacement = 0.03; // this value will need calibration as well (POLARITY)
   float mag_read = (3.3 * analogRead(A2)) / 1023;
   Serial.println(mag_read);
 
@@ -362,4 +375,23 @@ void readInfrared() {
     // For debugging
     Serial.println("Received Infrared: " + receivedInfraredFreq);
   }
+}
+
+void species() {
+  if((receivedInfraredFreq == "571 Hz") && (receivedPolarity == "North")) {
+    receivedSpecies = "Abronia";
+  }
+  else if((receivedInfraredFreq == "353 Hz") && (receivedPolarity == "South")) {
+    receivedSpecies = "Dixonius";
+  }
+  else if((receivedRadioFreq == "120 Hz") && (receivedPolarity == "North")) {
+    receivedSpecies = "Elgaria";
+  }
+  else if((receivedRadioFreq == "200 Hz") && (receivedPolarity == "South")) {
+    receivedSpecies = "Cophotis";
+  }
+  else {
+    receivedSpecies = "Not Detected";
+  }
+  Serial.println(receivedSpecies);
 }
